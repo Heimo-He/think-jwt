@@ -1,0 +1,26 @@
+{
+    "name": "heimo/think-jwt",
+    "description": "jwt for thinkphp6",
+    "homepage": "https://github.com/Heimo-He/think-jwt.git",
+    "type": "library",
+    "keywords": ["jwt", "thinkphp6", "thinkphp", "tp6", "php"],
+    "require": {
+        "php": ">=5.6",
+        "firebase/php-jwt": "^5.2"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {"heimo\\auth\\": "src"}
+    },
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "think": {
+            "config": {
+                "jwt": "src/config/jwt.php"
+            }
+        }
+    }
+}
