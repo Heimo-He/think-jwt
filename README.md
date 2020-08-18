@@ -7,6 +7,12 @@
 - 自动刷新token
 - header或body获取
 
+### 安装
+
+```shell
+composer require heimo/think-jwt
+```
+
 ## Example
 
 ### 配置文件`config/jwt.php`，公私玥使用openssl生成
