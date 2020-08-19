@@ -4,8 +4,8 @@
 ### 支持特性
 - hash对称加密
 - OpenSSL非对称加密
-- 自动刷新token
 - header或body获取
+- 无需设置refreshToken，设置时间token自动更新
 
 ### 安装
 
