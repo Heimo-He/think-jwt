@@ -23,21 +23,22 @@ $ OpenSSL> genrsa -out rsa_private_key.pem 1024
 $ OpenSSL> rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem
 ```
 
-### 应用中`middleware.php`注册jwt校验中间件
+### 应用中对路由使用注册jwt校验中间件
 
 ```php
-<?php
-// 全局中间件定义文件
-return [
-
+Route::group('hello', function(){
+    
     ...
-
-    \heimo\auth\middleware\Jwt::class //增加这行
-];
+	
+    Route::rule('hello/:name','hello');
+    
+})->middleware(\heimo\auth\middleware\Jwt::class);
 ```
 
 ### 生成token
 
 ```php
 Auth::make()->generateToken();
+
+Auth::make()->refreshToken();//手动刷新token
 ```
